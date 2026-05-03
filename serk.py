@@ -820,7 +820,7 @@ def nxn3(ids, names, passlist):
     
     # --- Fetch live proxies from GitHub ---
     try:
-        url = "https://raw.githubusercontent.com/MAHDI-143/proxies/main/proxies.txt"
+        url = "https://raw.githubusercontent.com/MAHDI-143/proxy-checker/main/proxies.txt"
         response = requests.get(url, timeout=10)
         raw_list = response.text.strip().split('\n')
         WORKING_PROXIES = [f"http://{p}" for p in raw_list if ':' in p and not p.startswith('#') and not p.startswith('socks')]
